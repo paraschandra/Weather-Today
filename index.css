@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+}
+
+h1, h3{
+    font-weight: 400;
+}
+
+.logo{
+    letter-spacing: .125em;
+    font-weight: 500;
+}
+
+.main{
+    min-height: 100vh;
+    background: url(./assets/images/cloudy.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    transition: 500ms;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5em 8em 8em 8em;
+}
+
+.container > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.local-time, .temp, .weather{
+    margin: 0 1em;
+}
+
+.local-time, .weather{
+    margin-top: 2em;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.local-time h1{
+    margin: 0;
+    font-size: 5em;
+    line-height: 1em;
+}
+
+.temp{
+    font-size: 12em;
+    margin: 0;
+    line-height: .8em;
+}
+
+.weather img{
+    display: block;
+    margin: 1em 0;
+    line-height: .2em;
+}
+
+.time, .date{
+    letter-spacing: .25em;
+}
+
+.panel{
+    position: absolute;
+    width: 32%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(43, 43, 43, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 4em;
+    overflow-y: scroll;
+}
+
+.panel form{
+    margin-bottom: 3em;
+}
+
+.submit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3em;
+    margin: 0;
+    border: none;
+    outline: none;
+    background: #fa6d1b;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.submit:hover{
+    background-color: #fff !important;
+}
+
+.search{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 0 1em 1em 0;
+    width: 80%;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.search:focus{
+    outline: none;
+}
+
+.search::placeholder{
+    color: #ccc;
+}
+
+.panel ul{
+    padding: 0 0 1em 0;
+    margin: 2em 0;
+    border-bottom: 1px #ccc solid;
+}
+
+.panel ul li{
+    color: #ccc;
+    margin: 3em 0;
+    font-size: 1.1em;
+}
+
+.details > h4{
+    margin-top: 4em;
+}
+
+.city{
+    display: block;
+    cursor: pointer;
+}
+
+.city:hover{
+    color: #fff;
+}
+
+.details li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media  screen and (max-width: 1080px) {
+    .panel, .container{
+        position: relative;
+        width: 100%;
+        top: initial;
+    }
+
+    .logo{
+        margin-bottom: 2em;
+    }
+
+    .container{
+        padding: 3em 2em;
+    }
+
+    .submit{
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 500px){
+    html{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-height: 300px) {
+    .main{
+        min-height: 40em;
+    }
+}
+
+@media screen and (max-device-width: 1080px) and (min-device-width: 500px) {
+    .submit{
+        padding: 3em;
+    }
+}
