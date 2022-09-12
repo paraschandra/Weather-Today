@@ -1,5 +1,5 @@
 const app = document.querySelector('.main');
-const API_KEY = `2ed89b435147ade82b842fc9c021c9ac`;
+
 const temp = document.querySelector('.temp');
 const dateOutput = document.querySelector('.date');
 const timeOutput = document.querySelector('.time');
