@@ -17,7 +17,6 @@ h1, h3{
 
 .main{
     min-height: 100vh;
-    background: url(./assets/images/day/cloudy.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,6 +45,10 @@ h1, h3{
     flex-wrap: wrap;
 }
 
+.weather-info{
+    max-width: 60%;
+}
+
 .local-time, .temp, .weather{
     margin: 0 1em;
 }
@@ -70,7 +73,7 @@ h1, h3{
 
 .weather img{
     display: block;
-    margin: 1em 0;
+    margin: 1em auto;
     line-height: .2em;
 }
 
@@ -92,7 +95,7 @@ h1, h3{
     height: 100%;
     top: 0;
     right: 0;
-    background-color: rgba(43, 43, 43, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(16px);
     padding: 4em;
@@ -121,7 +124,6 @@ h1, h3{
     margin: 0;
     border: none;
     outline: none;
-    background: #fa6d1b;
     cursor: pointer;
     transition: 0.4s;
 }
@@ -196,6 +198,10 @@ h1, h3{
 
     .submit{
         padding: 2em;
+    }
+
+    .weather-info{
+        max-width: 100%;
     }
 }
 
